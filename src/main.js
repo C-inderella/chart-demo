@@ -2,24 +2,29 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-// 按需加载 echarts 图表资源
-// import echarts from "echarts";
-// import "echarts/lib/chart/bar";
-// import "echarts/lib/chart/line";
-// // 按需加载 echarts 工具组件
-// import "echarts/lib/component/tooltip";
-// import "echarts/lib/component/title";
-// import "echarts/lib/component/legend";
 
-// import PagodaCharts from "pagoda-charts";
+import "./styles/index.css"; // 全局样式
+import "./rem.js";
 
-// Vue.config.productionTip = false;
+import "pagoda-mobile/lib/toast/style";
+import "pagoda-mobile/lib/table/style";
+import "pagoda-mobile/lib/tab/style";
+import "pagoda-mobile/lib/tabs/style";
+import "pagoda-mobile/lib/picker/style";
+import "pagoda-mobile/lib/button/style";
 
-// Vue.use(PagodaCharts, {
-//   echarts,
-// });
-// import echarts from "echarts";
-// Vue.prototype.$echarts = echarts;
+import { Toast } from "pagoda-mobile";
+import { Table } from "pagoda-mobile";
+import { Tab, Tabs } from "pagoda-mobile";
+import { Picker } from "pagoda-mobile";
+import { Button } from "pagoda-mobile";
+
+Vue.use(Toast);
+Vue.use(Table);
+Vue.use(Tab);
+Vue.use(Tabs);
+Vue.use(Picker);
+Vue.use(Button);
 
 new Vue({
   router,
